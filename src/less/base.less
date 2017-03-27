@@ -1,0 +1,89 @@
+/*重置默认样式*/
+
+html{
+	font-size: 100px;
+	height:100%;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin: 0;
+	padding: 0;
+}
+body { 
+	font-size: 0.12rem;
+	font-family: Helvetica, 'Microsoft YaHei', Arial, sans-serif; 
+	background: #58666e;
+	height:100%;
+}
+
+ul,ol{
+	list-style:none;
+}
+a{
+	font-size: .12rem;
+	text-decoration: none;
+}
+
+/* 去除 ie6 & ie7 焦点点状线 */
+a:focus,
+*:focus {
+	outline: none;
+}
+a:hover{
+	text-decoration: none;
+}
+/*要注意表单元素并不继承父级 font 的问题*/
+input,
+select,
+button,
+textarea {
+	font-size: 100%;
+	font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+
+img{
+	max-width:100%;
+	border:none;
+	display: inline-block;
+}
+
+/*清除浮动*/
+.clearfix{
+	
+}
+.clearfix::before, .clearfix::after{
+	clear:both;
+	display:block;
+	content: "";
+	height:0;
+	line-height: 0;
+	overflow: hidden;
+	zoom:1;		//ie6 ie7
+}
+.bold{font-weight: bold;}
+.normal{ font-weight: normal;}
+.hide{ display: hidden;}
+.block{ display: block;}
+.fl{ float: left;}
+.fr{ float: right;}
+
+.line{
+	width:100%;
+	height:1px;
+	margin:10px 0;
+	font-size:0px;
+}
+.line_dk{
+	background: #131e26;
+}
+.line_lg{
+	background: #EDF1F2;
+}
+.box_shadow{
+	box-shadow: 0 2px 2px rgba(0, 0, 0, .05), 0 1px 0 rgba(0, 0, 0, .05);
+}
+
+
+@bg_black:#1c2b36;   //深色背景
+@bg_white:#ffffff;	 //白色背景
+@font_black:#58666e;	//黑色文字
+@font_white:#5c798f;	//深色背景上的亮色文字
