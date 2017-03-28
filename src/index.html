@@ -4,7 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="full-screen" content="yes" />
+    <meta name="x5-fullscreen" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1">
     <title>雨過天晴Blog - 一个web前端开发者的个人博客网站</title>
     <meta name="key" content="个人博客,个人网站,个人主页,雨过天晴,雨過天晴Blog,雨过天晴个人博客,雨过天晴个人网站">
     <meta name="description" content="雨过天晴个人博客，是记录一个前端开发者的工作、学习、生活、情感的个人网站。" />
@@ -22,20 +26,22 @@
     <div class="allwrap">
         <header class="blog_header clearfix">
             <div class="header_lt pull-left">
-                <button class="pull-right visible-xs">
-                    <i class="glyphicon glyphicon-cog"></i>
+                <button class="pull-right visible-xs" data-ui-toggleClass="search_show" data-target=".header_rt">
+                    <i class="icon-search"></i>
                 </button>
-                <button class="pull-right visible-xs">
-                    <i class="glyphicon glyphicon-align-justify"></i>
+                <button class="pull-right visible-xs" data-ui-toggleClass="slide_menu slide_con" data-target=".blog_aside .blog_content">
+                    <i class="icon-align-justify"></i>
                 </button>
                 <a href="index.html" class="navbar-brand pull-left blog_brand">
                     <i class="icon-home"></i> 雨過天晴
                 </a>
             </div>
-            <div class="header_rt box_shadow pull-right">
+            <div class="header_rt box_shadow">
                 <a href="" class=""></a>
                 <span class="text hidden-xs">生命難免遭受苦難，雨過天晴終有陽光！</span>
-                <!-- <span>手机<i class="icon-caret-down"></i></span> -->
+                <!-- <a href="#" class="pull-right visible-lg">
+                    <img src='img/code.png'>
+                </a> -->
                 <form class="form-inline pull-right search_form">
                     <div class="form-group">
                         <div class="input-group">
@@ -47,7 +53,7 @@
             </div>
         </header>
         <!-- /header -->
-        <aside class="blog_aside hidden-xs">
+        <aside id="menu" class="blog_aside">
             <section class="avatar_wrap">
                 <a href="#" class="avatar">
                     <img src="images/avatar_200X200.jpg" alt="头像" title="头像">
@@ -76,7 +82,7 @@
             </nav>
         </aside>
         <div class="blog_content clearfix">
-            <div class="content_lt pull-left">
+            <div class="content_lt">
                 <section class="well blog_well">
                     <span>雨過天晴</span>
                     <p>Record the dribs and drabs of life</p>
@@ -88,7 +94,7 @@
                             <p>担心的事情还是发生了 最近忙于驾校练车加上课很多，还有一些琐事。没怎么关注博客这里。今天偶然看到了有人说多说停止服务。赶紧到其网站确定一下，网站公告果然写着6月1日停止服务。 自己做博客没几天，而且不懂技术，目的也只是给自己...</p>
                         </div>
                         <div class="line line_lg"></div>
-                        <div class="panel-footer">
+                         <div class="panel-footer">
                             <span title="作者"><i class="icon-edit"></i>雨过天晴</span>
                             <span title="发布时间"><i class="icon-time"></i>2015 年 03 月 21 日</span>
                             <span title="浏览"><i class="icon-eye-open"></i>45232人看过</span>
@@ -109,7 +115,6 @@
                             <span title="标签"><i class="icon-comments"></i>12条评论</span>
                         </div>
                     </div>
-                    
                     <section class="blog_fenye text-center">
                         <ul class="pagination pagination-md hidden-sm hidden-xs pull-right">
                             <li>
@@ -131,7 +136,7 @@
                     </section>
                 </article>
             </div>
-            <div class="content_rt pull-right">
+            <div class="content_rt">
                 <section class="hots_wrap">
                     <h2><i class="icon-fire"></i>阅读排行<span class="icon-angle-right pull-right more"></span></h2>
                     <ul class="hots_list">
@@ -171,6 +176,7 @@
     </div>
     <script src="js/libs/jquery-1.9.1.min.js"></script>
     <script src="js/libs/bootstrap.js"></script>
+    <script src="js/common.js"></script>
 </body>
 
 </html>
