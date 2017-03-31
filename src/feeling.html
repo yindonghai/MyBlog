@@ -22,19 +22,19 @@
     <div class="allwrap">
         <header class="blog_header clearfix">
             <div class="header_lt pull-left">
-                <button class="pull-right visible-xs">
-                    <i class="glyphicon glyphicon-cog"></i>
+                <button class="pull-right visible-xs" data-ui-toggleClass="search_show" data-target=".header_rt">
+                    <i class="icon-search"></i>
                 </button>
-                <button class="pull-right visible-xs">
-                    <i class="glyphicon glyphicon-align-justify"></i>
+                <button class="pull-right visible-xs" data-ui-toggleClass="slide_menu slide_con" data-target=".blog_aside .blog_content">
+                    <i class="icon-align-justify"></i>
                 </button>
                 <a href="index.html" class="navbar-brand pull-left blog_brand">
                     <i class="icon-home"></i> 雨過天晴
                 </a>
             </div>
-            <div class="header_rt box_shadow pull-right">
+            <div class="header_rt box_shadow">
                 <a href="" class=""></a>
-                <span class="text hidden-xs">生命難免遭受苦難，雨過天晴終有陽光！</span>
+                <div id="weather" class="hidden-xs"></div>
                 <form class="form-inline pull-right search_form">
                     <div class="form-group">
                         <div class="input-group">
@@ -46,7 +46,7 @@
             </div>
         </header>
         <!-- /header -->
-        <aside class="blog_aside hidden-xs">
+        <aside id="menu" class="blog_aside">
             <section class="avatar_wrap">
                 <a href="#" class="avatar">
                     <img src="images/avatar_200X200.jpg" alt="头像" title="头像">
@@ -61,8 +61,18 @@
                 <p class="">导航</p>
                 <ul>
                     <li><a href="about.html" title=""><i class="icon-user"></i><span>关于</span><i class="icon-angle-right"></i></a></li>
-                    <li><a href="feeling.html" title=""><i class="icon-coffee"></i><span>随笔</span><i class="icon-angle-right"></i></a></li>
-                    <li><a href="learn.html" title=""><i class="icon-pencil"></i><span>技术</span><i class="icon-angle-right"></i></a></li>
+                    <li><a href="feeling.html" title=""><i class="icon-coffee"></i><span>随笔</span><i class="icon-angle-right"></i></a>
+                        <ul>
+                            <li><a href="learn.html">web前端</a></li>
+                            <li><a href="#">PHP</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" title=""><i class="icon-pencil"></i><span>技术</span><i class="icon-angle-right"></i></a>
+                        <ul>
+                            <li><a href="learn.html">web前端</a></li>
+                            <li><a href="#">PHP</a></li>
+                        </ul>
+                    </li>
                     <li><a href="message.html" title=""><i class="icon-comments"></i><span>留言</span><i class="icon-angle-right"></i></a></li>
                     <li><a href="link.html" title=""><i class="icon-link"></i><span>友链</span><i class="icon-angle-right"></i></a></li>
                 </ul>
@@ -70,22 +80,15 @@
             </nav>
         </aside>
         <div class="blog_content clearfix">
-            <div class="content_lt pull-left">
+            <div class="content_lt">
                 <section class="well blog_well">
-                    <span>雨過天晴</span>
-                    <p>Record the dribs and drabs of life</p>
-                </section>
-                <section class="blog_breadcrumb">
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="icon-home"></i>首页</a></li>
-                        <li><a href="#">随笔</a></li>
-                        <li class="active">正文</li>
-                    </ol>
+                    <span>随笔</span>
+                    <span>记录生活的点点滴滴</span>
                 </section>
                 <article class="article_wrap">
                     <div class="panel box_shadow">
                         <div class="panel-body">
-                            <h2><a href="#">多说停止服务，索性换个博客程序多说停止服务</a></h2>
+                            <h2><a href="#">多说停止服务，索性换个博客程序多说停止服务，索性换个博客程序</a></h2>
                             <p>担心的事情还是发生了 最近忙于驾校练车加上课很多，还有一些琐事。没怎么关注博客这里。今天偶然看到了有人说多说停止服务。赶紧到其网站确定一下，网站公告果然写着6月1日停止服务。 自己做博客没几天，而且不懂技术，目的也只是给自己...</p>
                         </div>
                         <div class="line line_lg"></div>
@@ -107,6 +110,7 @@
                             <span title="发布时间"><i class="icon-time"></i>2015 年 03 月 21 日</span>
                             <span title="浏览"><i class="icon-eye-open"></i>45232人看过</span>
                             <span title="评论"><i class="icon-comments"></i>12条评论</span>
+                            <span title="标签"><i class="icon-comments"></i>12条评论</span>
                         </div>
                     </div>
                     <section class="blog_fenye text-center">
@@ -130,15 +134,27 @@
                     </section>
                 </article>
             </div>
-            <div class="content_rt pull-right">
+            <div class="content_rt">
+                
                 <section class="hots_wrap">
-                    <h2><i class="icon-fire"></i>阅读排行<span class="icon-angle-right pull-right more"></span></h2>
+                    <h2><i class="icon-fire"></i> 阅读排行<span class="icon-angle-right pull-right more"></span></h2>
                     <ul class="hots_list">
                         <li><a href=""><i>1</i>人类真有可能在2030年实现登陆火星的梦想吗？…</a></li>
                         <li><a href=""><i>2</i>国内十大床家具品牌排行</a></li>
                         <li><a href=""><i>3</i>床家具品牌排行榜：尚品宅配</a></li>
                         <li><a href=""><i>4</i>习近平的32字改革方法论</a></li>
                         <li><a href=""><i>5</i>林郑月娥在香港特区第五任行政长官选举中胜出</a></li>
+                    </ul>
+                </section>
+                <div class="line line_lg"></div>
+                <section class="hots_wrap">
+                    <h2><i class="icon-edit"></i> 最新文章<span class="icon-angle-right pull-right more"></span></h2>
+                    <ul class="hots_list">
+                        <li><a href=""><span>●</span> 人类真有可能在2030年实现登陆火星的梦想吗？…</a></li>
+                        <li><a href=""><span>●</span> 国内十大床家具品牌排行</a></li>
+                        <li><a href=""><span>●</span> 床家具品牌排行榜：尚品宅配</a></li>
+                        <li><a href=""><span>●</span> 习近平的32字改革方法论</a></li>
+                        <li><a href=""><span>●</span> 林郑月娥在香港特区第五任行政长官选举中胜出</a></li>
                     </ul>
                 </section>
                 <div class="line line_lg"></div>
@@ -170,6 +186,8 @@
     </div>
     <script src="js/libs/jquery-1.9.1.min.js"></script>
     <script src="js/libs/bootstrap.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/plugins/jquery.leoweather.min.js"></script>
 </body>
 
 </html>
